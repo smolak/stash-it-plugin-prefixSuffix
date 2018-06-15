@@ -1,9 +1,9 @@
 ![logo-stash-it-color-dark 2x](https://user-images.githubusercontent.com/1819138/30385483-99fd209c-98a7-11e7-85e2-595791d8d894.png)
 
-# stash-it-plugin-prefixsuffix
+# stash-it-plugin-prefixSuffix
 
-[![build status](https://img.shields.io/travis/smolak/stash-it-plugin-prefixsuffix/master.svg?style=flat-square)](https://travis-ci.org/smolak/stash-it-plugin-prefixsuffix)
-[![Coverage Status](https://coveralls.io/repos/github/smolak/stash-it-plugin-prefixsuffix/badge.svg?branch=master)](https://coveralls.io/github/smolak/stash-it-plugin-prefixsuffix)
+[![build status](https://img.shields.io/travis/smolak/stash-it-plugin-prefixSuffix/master.svg?style=flat-square)](https://travis-ci.org/smolak/stash-it-plugin-prefixSuffix)
+[![Coverage Status](https://coveralls.io/repos/github/smolak/stash-it-plugin-prefixSuffix/badge.svg?branch=master)](https://coveralls.io/github/smolak/stash-it-plugin-prefixSuffix)
 
 
 Prefix / suffix plugin for [stash-it](https://www.npmjs.com/package/stash-it).
