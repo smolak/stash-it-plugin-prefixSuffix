@@ -1,6 +1,6 @@
 {
   "name": "stash-it-plugin-prefixsuffix",
-  "version": "1.0.0-rc.3",
+  "version": "1.0.0",
   "description": "Prefix / suffix plugin for stash-it",
   "main": "build/index.js",
   "scripts": {
