@@ -2,8 +2,8 @@
 
 # stash-it-plugin-prefixsuffix
 
-[![build status](https://img.shields.io/travis/smolak/stash-it-plugin-prefixsuffix/master.svg?style=flat-square)](https://travis-ci.org/smolak/stash-it-plugin-ttl)
-[![Coverage Status](https://coveralls.io/repos/github/smolak/stash-it-plugin-prefixsuffix/badge.svg?branch=master)](https://coveralls.io/github/smolak/stash-it-plugin-ttl)
+[![build status](https://img.shields.io/travis/smolak/stash-it-plugin-prefixsuffix/master.svg?style=flat-square)](https://travis-ci.org/smolak/stash-it-plugin-prefixsuffix)
+[![Coverage Status](https://coveralls.io/repos/github/smolak/stash-it-plugin-prefixsuffix/badge.svg?branch=master)](https://coveralls.io/github/smolak/stash-it-plugin-prefixsuffix)
 
 
 Prefix / suffix plugin for [stash-it](https://www.npmjs.com/package/stash-it).
