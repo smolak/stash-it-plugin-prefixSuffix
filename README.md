@@ -64,6 +64,24 @@ item.value; // 22_TEAM_22
 item.key; // team2key
 ```
 
+Plugin extends cache instance with two methods: **getPrefix()** and **getSuffix()**.
+They return prefix / suffix passed upon plugin's creation.
+
+```javascript
+import createPrefixSuffixPlugin from 'stash-it-plugin-prefixsuffix';
+
+const prefix = 'somePrefix';
+const suffix = 'someSuffix';
+
+// assuming you already have cache instance created
+
+const plugin = createPrefixSuffixPlugin({ prefix, suffix });
+const cacheWithPrefixSuffix = cache.registerPlugins([ plugin ]);
+
+cacheWithPrefixSuffix.getPrefix(); // somePrefix
+cacheWithPrefixSuffix.getSuffix(); // someSuffix
+```
+
 ## API
 
 Plugin takes an object, as an argument, upon creation. This object must contain
