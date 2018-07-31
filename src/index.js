@@ -1,6 +1,9 @@
 export default function prefixSuffix(options) {
     const hasPrefix = options && options.hasOwnProperty('prefix');
     const hasSuffix = options && options.hasOwnProperty('suffix');
+    const cacheInstanceDoesntHaveExtensions = (cacheInstance) => {
+        return typeof cacheInstance.getPrefix !== 'function' || typeof cacheInstance.getSuffix !== 'function';
+    };
 
     if (!options || (!hasPrefix && !hasSuffix)) {
         throw new Error('You need to pass either `prefix` or `suffix` or both.');
@@ -17,6 +20,16 @@ export default function prefixSuffix(options) {
     }
 
     return {
+        createExtensions: ({ cacheInstance }) => {
+            if (cacheInstanceDoesntHaveExtensions(cacheInstance)) {
+                return {
+                    getPrefix: () => prefix,
+                    getSuffix: () => suffix
+                }
+            }
+
+            return {};
+        },
         hooks: [
             {
                 event: 'preBuildKey',

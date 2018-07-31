@@ -115,4 +115,44 @@ describe('Prefix / suffix plugin', () => {
             });
         });
     });
+
+    describe('createExtensions', () => {
+        it('should be a function', () => {
+            const plugin = createPrefixSuffixPlugin({ prefix, suffix });
+
+            expect(plugin.createExtensions).to.be.a('function');
+        });
+
+        describe('getPrefix', () => {
+            it(`should return prefix passed upon plugin's construction`, () => {
+                const plugin = createPrefixSuffixPlugin({ prefix });
+                const extensions = plugin.createExtensions({ cacheInstance });
+
+                expect(extensions.getPrefix()).to.equal(prefix);
+            });
+        });
+
+        describe('getSuffix', () => {
+            it(`should return suffix passed upon plugin's construction`, () => {
+                const plugin = createPrefixSuffixPlugin({ suffix });
+                const extensions = plugin.createExtensions({ cacheInstance });
+
+                expect(extensions.getSuffix()).to.equal(suffix);
+            });
+        });
+
+        context('when plugin was already once registered (it can be used multiple times)', () => {
+            it('should return object with no extensions (to not try to overwrite existing ones)', () => {
+                const cacheInstanceDouble = {
+                    getPrefix: () => {},
+                    getSuffix: () => {}
+                };
+
+                const plugin = createPrefixSuffixPlugin({ prefix, suffix });
+                const extensions = plugin.createExtensions({ cacheInstance: cacheInstanceDouble});
+
+                expect(extensions).to.deep.equal({});
+            });
+        });
+    });
 });
